@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working Google Search Website Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="main">
+            <img src="google.jpg">
+            <div class="searchBx">
+                <input type="text" name=""class="query" value="">
+                <!-- 输入文本 -->
+                <div class="icons">
+                    <div><img src="search.jpg"></div>
+                    <div><img src="mic.jpg"></div>
+                </div>
+                <!-- 两边放入图标 -->
+            </div>
+            <div clsaa="button">
+                <button class="searchBtn">Google Search</button>
+                <!-- 放一个按钮 -->
+            </div>
+        </div>   
+    </section>
+    <script>/*定义客户端脚本：客户端脚本是前端的脚本代码,它运行在Web浏览器上而不是服务器上,所以能返回即时响应。使用客户端脚本,您可以在客户端执行事件触发的UI操作,轻松地实现高度交互的自定义业务逻辑*/
+        let query = document.querySelector(' .query');
+        let searchBtn = document.querySelector('.searchBtn');
+        searchBtn.onclick = function(){/*行使function*/
+            let url = 'https://www.google.com/search?q='+query.value;/*获取url参数数据*/
+            window.open(url, '_self');/*打开新窗口（替代自己）*/
+        }
+    </script>
+</body>
+</html>

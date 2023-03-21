@@ -1,0 +1,94 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 加了box-sizing:border-box属性，padding和border的值就不会在影响元素的宽高，相当于把padding和border的值都算在content里 */
+    font-family: 'arial', sans-serif;
+    /* 字体 西文中无衬线体*/
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* height:100vh时,即使没有内容,也可以撑开百分百的高度 */
+    display: flex;
+    /* 弹性布局，它能够扩展和收缩 flex 容器内的元素，以最大限度地填充可用空间 */
+    justify-content: center;
+    /* 弹性盒子容器的对齐方式 */
+    align-items: center;
+    /* flex子项们相对于flex容器在垂直方向上的对齐方式 */
+}
+section .main
+{
+    width: 580px;
+    margin: 0 20px;
+    /* 上下 左右 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 决定主轴的方向（即项目的排列方向） */
+}
+section .main .searchBx
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+section .main .searchBx .query
+{
+    width: 100%;
+    padding:13px;
+    /* 内边 */
+    border: 1px solid #ccc;
+    /* 边框 */
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;    
+    /* 圆角边框 */
+    padding-left: 45px;
+    /* 左内边 */
+    padding-right: 60px;
+    /* 右内边 */
+}
+section .main .searchBx .icons
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    /* 两端对齐，项目之间的间隔都相等 */
+    align-items: center;
+    pointer-events: none;
+    /* 你可以看的到某个元素，但是你无法摸的着，点击不到，点击会穿透触发到下层的元素 */
+}
+section .main .searchBx .icons img
+{
+    max-width: 100%;
+    /* width: 100%(不包括margin和padding和border)是将所有指定元素的宽度拉伸或收缩到和父元素的宽度一致， */
+/* 而max-width: 100%则是如果指定元素的宽度不超过父元素的宽度， */
+/* 则大小不变，如果超过了父元素的宽度，则将宽度收缩为父元素的宽度 */
+}
+.searchBtn
+{
+    margin: 0 5px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    color: #555;
+    font-size: 14px;
+    border:none;
+    cursor: pointer;
+    /* 鼠标经过或点击有小手样式 */
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    /* 使outline属性无效 */
+}
+.searchBtn:hover
+{
+    border: 1px solid #ccc;
+}
